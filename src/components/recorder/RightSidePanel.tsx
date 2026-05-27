@@ -623,7 +623,7 @@ export const RightSidePanel: React.FC<RightSidePanelProps> = ({ onFinishCapture 
                         }
                       }
                     } else {
-                      notify("warning", "No pagination detected. If present, please manually select.");
+                      notify("warning", "No pagination detected. If present, please mannually select.");
                       setAutoDetectedPagination(null);
                     }
                   }
@@ -947,7 +947,7 @@ export const RightSidePanel: React.FC<RightSidePanelProps> = ({ onFinishCapture 
                         mb: 1
                       }}
                     >
-                      You can continue with this or manually select a different pagination type below.
+                      You can continue with this or mannually select a different pagination type below.
                     </Typography>
                     {autoDetectedPagination.selector && ['clickNext', 'clickLoadMore'].includes(autoDetectedPagination.type) && (
                       <Button

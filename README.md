@@ -44,7 +44,7 @@ It supports extraction, crawling, scraping, and search — designed to scale fro
 
 ## How Does It Work?
 
-Maxun robots are automated tools that help you collect data from websites without writing any code. Think of them as your personal web assistants that can navigate websites, extract information, and organize data just like you would manually - but faster and more efficiently.
+Maxun robots are automated tools that help you collect data from websites without writing any code. Think of them as your personal web assistants that can navigate websites, extract information, and organize data just like you would mannually - but faster and more efficiently.
 
 There are four types of robots, each designed for a different job.
 
