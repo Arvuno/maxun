@@ -1565,7 +1565,7 @@ Return ONLY the list name, nothing else:`;
         }
         return {
           success: false,
-          errors: [`No search results found for query: "${intent.searchQuery}". Please provide a URL manually or refine your prompt.`]
+          errors: [`No search results found for query: "${intent.searchQuery}". Please provide a URL mannually or refine your prompt.`]
         };
       }
 

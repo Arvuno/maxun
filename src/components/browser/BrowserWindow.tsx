@@ -99,7 +99,7 @@ export const BrowserWindow = () => {
     } | null>(null);
 
     const [initialAutoFieldIds, setInitialAutoFieldIds] = useState<Set<number>>(new Set());
-    const [manuallyAddedFieldIds, setManuallyAddedFieldIds] = useState<Set<number>>(new Set());
+    const [mannuallyAddedFieldIds, setMannuallyAddedFieldIds] = useState<Set<number>>(new Set());
 
     const { socket } = useSocketStore();
     const { notify, currentTextActionId, currentListActionId, updateDOMMode, isDOMMode } = useGlobalInfoStore();
@@ -826,11 +826,11 @@ export const BrowserWindow = () => {
         }
       });
 
-      if (newManualIds.size !== manuallyAddedFieldIds.size ||
-        ![...newManualIds].every(id => manuallyAddedFieldIds.has(id))) {
-        setManuallyAddedFieldIds(newManualIds);
+      if (newManualIds.size !== mannuallyAddedFieldIds.size ||
+        ![...newManualIds].every(id => mannuallyAddedFieldIds.has(id))) {
+        setMannuallyAddedFieldIds(newManualIds);
       }
-    }, [browserSteps, getList, listSelector, initialAutoFieldIds, currentListActionId, manuallyAddedFieldIds]);
+    }, [browserSteps, getList, listSelector, initialAutoFieldIds, currentListActionId, mannuallyAddedFieldIds]);
 
     useEffect(() => {
       if (currentListActionId && browserSteps.length > 0) {
@@ -877,7 +877,7 @@ export const BrowserWindow = () => {
         });
       }
 
-      if (getList && listSelector && currentListActionId && manuallyAddedFieldIds.size > 0) {
+      if (getList && listSelector && currentListActionId && mannuallyAddedFieldIds.size > 0) {
         const listSteps = browserSteps.filter(
           step => step.type === 'list' && step.actionId === currentListActionId
         ) as ListStep[];
@@ -885,7 +885,7 @@ export const BrowserWindow = () => {
         listSteps.forEach(listStep => {
           if (listStep.fields) {
             Object.entries(listStep.fields).forEach(([fieldId, field]: [string, any]) => {
-              if (manuallyAddedFieldIds.has(parseInt(fieldId)) && field.selectorObj?.selector) {
+              if (mannuallyAddedFieldIds.has(parseInt(fieldId)) && field.selectorObj?.selector) {
                 capturedSelectors.push({
                   selector: field.selectorObj.selector,
                 });
@@ -900,7 +900,7 @@ export const BrowserWindow = () => {
       } else {
         capturedElementHighlighter.clearHighlights();
       }
-    }, [browserSteps, getText, getList, listSelector, currentTextActionId, currentListActionId, isDOMMode, manuallyAddedFieldIds]);
+    }, [browserSteps, getText, getList, listSelector, currentTextActionId, currentListActionId, isDOMMode, mannuallyAddedFieldIds]);
 
     useEffect(() => {
         if (listSelector) {
@@ -925,7 +925,7 @@ export const BrowserWindow = () => {
         setCurrentListId(null);
         setCachedChildSelectors([]);
         setInitialAutoFieldIds(new Set());
-        setManuallyAddedFieldIds(new Set());
+        setMannuallyAddedFieldIds(new Set());
     }, []);
 
     useEffect(() => {
