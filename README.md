@@ -141,3 +141,7 @@ Thank you to the combined efforts of everyone who contributes!
 
 ## Contributing
 PRs welcome!
+
+## Contributing
+
+PRs welcome! Please read the contribution guidelines before submitting.
