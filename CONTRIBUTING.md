@@ -55,3 +55,6 @@ AI-assisted contributions are welcome. If you use AI tools to generate code, ple
 4. You understand the code you are submitting and can respond to review feedback.
 
 Low-quality, unverified, or blindly generated patches will not be merged.
+
+## Contributors
+- Documentation improvements (2026)
